@@ -1,4 +1,9 @@
+
 // npm start
+// yarn install
+// yarn build
+// yarn start
+
 import React, { Component } from "react";
 
 import "./App.css";
