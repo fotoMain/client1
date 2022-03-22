@@ -1,13 +1,6 @@
-
-
 // npm start
-
-// yarn install
-// yarn build
-// yarn start
-
 import React, { Component } from "react";
-
+import logo from "./logo.svg";
 import "./App.css";
 
 class App extends Component {
@@ -45,14 +38,19 @@ class App extends Component {
 
     return (
         <div className="App">
-            <div
-                style={{width:'130px', height:'50px',
-                    display:'flex',
-                    flexDirection:'row',
-                    justifyContent:'center',
-                    backgroundColor:'red'}}>
-                <button  onClick={(e)=>onClick_sendAPI(e)}>SEND API</button>
-            </div>
+          <header className="App-header">
+              <p className="App-intro">{this.state.apiResponse}</p>
+              <div
+                  style={{width:'130px', height:'50px',
+                      display:'flex',
+                      flexDirection:'row',
+                      justifyContent:'center',
+                      backgroundColor:'red'}}>
+              <button  onClick={(e)=>onClick_sendAPI(e)}>SEND API</button>
+              </div>
+            <img src={logo} className="App-logo" alt="logo" />
+            <h1 className="App-title">Welcome to 2 React</h1>
+          </header>
         </div>
     );
   }
