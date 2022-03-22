@@ -10,18 +10,22 @@ class App extends Component {
   }
 
   callAPI() {
+    console.log("=== callAPI start")
     fetch("http://localhost:9000/testAPI")
     // fetch("http://localhost:9000/reset-password")
         .then(res => res.text())
         .then(res => {
             this.setState({apiResponse: res + " moment 2 "+Date.now()},
                 (e) => {
-                    console.log("=== callAPI")
+                    console.log("=== callAPI OK")
                     console.log(this.state.apiResponse)
                 }
             )
         })
-        .catch(err => err);
+        .catch(err => {
+            console.error("=== callAPI err")
+            console.log(err)
+        });
   }
 
   componentDidMount() {
@@ -39,18 +43,14 @@ class App extends Component {
     return (
         <div className="App">
           <header className="App-header">
-              <p className="App-intro">{this.state.apiResponse}</p>
               <div
                   style={{width:'130px', height:'50px',
                       display:'flex',
                       flexDirection:'row',
                       justifyContent:'center',
                       backgroundColor:'red'}}>
-              <button  onClick={(e)=>onClick_sendAPI(e)}>SEND API</button>
-              </div>
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to 2 React</h1>
-          </header>
+                  <button  onClick={(e)=>onClick_sendAPI(e)}>SEND API</button>
+              </div>          </header>
         </div>
     );
   }
