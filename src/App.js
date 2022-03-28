@@ -11,7 +11,7 @@ class App extends Component {
 
   callAPI() {
     console.log("=== callAPI start")
-    fetch("http://localhost:9000/testAPI")
+    fetch("https://netlify-email.netlify.app/")
     // fetch("http://localhost:9000/reset-password")
         .then(res => res.text())
         .then(res => {
