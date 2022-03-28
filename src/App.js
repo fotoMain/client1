@@ -11,7 +11,7 @@ class App extends Component {
 
   callAPI() {
     console.log("=== callAPI start")
-    fetch("https://netlify-email.netlify.app/"
+    fetch("https://netlify-email.netlify.app"
         , {
             mode: 'no-cors' // 'cors' by default
         })
@@ -21,6 +21,7 @@ class App extends Component {
             this.setState({apiResponse: res + " moment 2 "+Date.now()},
                 (e) => {
                     console.log("=== callAPI OK")
+                    console.log(res)
                     console.log(this.state.apiResponse)
                 }
             )
