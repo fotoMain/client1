@@ -12,9 +12,10 @@ class App extends Component {
   callAPI() {
     console.log("=== callAPI start")
     fetch("https://netlify-email.netlify.app"
-        , {
-            mode: 'no-cors' // 'cors' by default
-        })
+        // , {
+        //     mode: 'no-cors' // 'cors' by default
+        // }
+        )
     // fetch("http://localhost:9000/reset-password")
         .then(res => res.text())
         .then(res => {
