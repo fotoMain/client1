@@ -1,6 +1,16 @@
 // npm start
 import React, { Component } from "react";
 
+//Access to fetch at netlify app' from origin has been blocked by CORS policy
+// react fetc error cors call netlify page
+//what is correct way react fetch netlify page
+//what is correct way react fetch netlify page error cors call
+//what is correct way react fetch netlify api  to send email
+// what is correct way call page with data on netlify
+// fetch netlify page as api
+// call netlify function from another domain
+
+
 import "./App.css";
 
 class App extends Component {
@@ -11,7 +21,19 @@ class App extends Component {
 
   callAPI() {
     console.log("=== callAPI start")
-    fetch("https://netlify-email.netlify.app"
+    // fetch("https://netlify-email.netlify.app"
+    fetch("https://netlify-email.netlify.app/.netlify/functions/send-email"
+
+
+        ,{
+            mode: 'no-cors',
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": "Content-Type",
+                "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTION",
+            },
+        }
+
         // , {
         //     mode: 'no-cors' // 'cors' by default
         // }
