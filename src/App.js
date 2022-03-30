@@ -26,7 +26,10 @@ class App extends Component {
 
 
         ,{
+            body: "7777777 8888888",
+            // body: {"p1":"7777777","p2":"8888888"},
             mode: 'no-cors',
+            method: 'POST',
             headers: {
                 "Access-Control-Allow-Origin": "*",
                 "Access-Control-Allow-Headers": "Content-Type",
