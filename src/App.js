@@ -22,12 +22,14 @@ class App extends Component {
   callAPI() {
     console.log("=== callAPI start")
     // fetch("https://netlify-email.netlify.app"
+    const v1 = `777 \\\\ //$ '+++' 7777`;
+
     fetch("https://netlify-email.netlify.app/.netlify/functions/send-email"
 
 
         ,{
-            body: "7777777 8888888",
-            // body: {"p1":"7777777","p2":"8888888"},
+            // body: "7777777 8888888",
+            body: JSON.stringify({"p1": v1,"p2":"8888888"}),
             mode: 'no-cors',
             method: 'POST',
             headers: {
