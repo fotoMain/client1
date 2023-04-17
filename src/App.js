@@ -170,6 +170,7 @@ class App extends Component {
               </div>
           </header>
 
+
             {(this.state.send_email)?
                 <SendEmail
                     p_url ={process_API_URL}
