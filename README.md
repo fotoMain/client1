@@ -16,7 +16,6 @@ graphql
       addClient
         CREATE_CLIENT = from( clientMutations )
 
-
 echo "# render2-client" >> README.md
 git init
 git add .
