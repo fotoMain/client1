@@ -2,11 +2,40 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import {ApolloClient, ApolloProvider, InMemoryCache} from "@apollo/client";
 // import reportWebVitals from './reportWebVitals';
+
+const apolloCache = new InMemoryCache({
+    typePolicies: {
+        Query: {
+            fields: {
+                clients: {
+                    merge(existing, incoming) {
+                        return incoming;
+                    },
+                },
+                projects: {
+                    merge(existing, incoming) {
+                        return incoming;
+                    },
+                },
+            },
+        },
+    },
+});
+
+const apolloClient = new ApolloClient({
+    uri: 'https://render2-mern.onrender.com/api/v1/graphql',
+    cache: apolloCache,
+});
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+
+      <ApolloProvider client={apolloClient}>
+            <App />
+      </ApolloProvider>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

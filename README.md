@@ -1,9 +1,26 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+taskkill /im node.exe /f
 
-# Google password for App
 
-https://myaccount.google.com/security?rapt=AEjHL4Njy7rpV8to9k9QPB-vFqqIAWfsVXNWfcISz6mc5xwpIQh8VZTbkSD0gKhJNN25suDOXKgqOIZbdpgeIMuH9YLEMYXefw
+This project was bootstrapped with graphql
 
-![img.png](img.png)
+graphql
+ mutations->clientMutations->CREATE_CLIENT
+  SERVER
+    functions call: addClient === createClient
+
+  CLIENT
+    setClientName = useState(
+    button
+      addClient
+        CREATE_CLIENT = from( clientMutations )
+
+
+echo "# render2-client" >> README.md
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/fotomain/render2-client.git
+git push -u origin main

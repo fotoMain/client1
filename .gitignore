@@ -1,5 +1,5 @@
 node_modules/
 npm-debug.log
-src/api_keys.js
+src/secrets.js
 api_keys.env
 api_keys.js
